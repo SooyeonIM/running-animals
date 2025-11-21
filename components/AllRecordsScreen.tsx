@@ -68,8 +68,9 @@ const AllRecordsScreen: React.FC<AllRecordsScreenProps> = ({ onBack, onScoreUpda
 
   const handleCloseModal = () => {
     setModalState(prev => ({...prev, show: false}));
+    // The user stays on the current screen to view records or generate new ones manually
     if (modalState.isCorrect) {
-        onBack();
+       // Optional: generateRecords(); // If we wanted to auto-refresh
     }
   };
 
